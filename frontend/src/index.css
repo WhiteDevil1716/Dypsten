@@ -1,0 +1,192 @@
+/* DYPSTEN - Global Styles - Nothing Aesthetic */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  /* Colors - ONLY these 4 */
+  --black: #000000;
+  --white: #FFFFFF;
+  --grey-light: #F5F5F5;
+  --grey-medium: #E0E0E0;
+  --grey-dark: #666666;
+  --orange: #FF5722;
+
+  /* Typography */
+  --font-primary: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-family: var(--font-primary);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background: var(--white);
+  color: var(--black);
+  line-height: 1.6;
+}
+
+code {
+  font-family: 'SF Mono', 'Monaco', 'Inconsolata', 'Courier New', monospace;
+  background: var(--grey-light);
+  padding: 0.2rem 0.4rem;
+  border-radius: 0;
+  font-size: 0.875em;
+}
+
+/* Remove all default animations */
+* {
+  animation-duration: 0s !important;
+  animation-delay: 0s !important;
+  transition-duration: 0.2s !important;
+}
+
+/* Typography Scale */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: 900;
+  letter-spacing: -1px;
+  line-height: 1.1;
+  color: var(--black);
+}
+
+h1 {
+  font-size: clamp(3rem, 6vw, 6rem);
+}
+
+h2 {
+  font-size: clamp(2.5rem, 5vw, 4rem);
+}
+
+h3 {
+  font-size: clamp(1.5rem, 3vw, 2rem);
+}
+
+h4 {
+  font-size: 1.25rem;
+}
+
+h5 {
+  font-size: 1.125rem;
+}
+
+h6 {
+  font-size: 1rem;
+}
+
+p {
+  font-size: 1rem;
+  line-height: 1.7;
+  color: var(--grey-dark);
+}
+
+a {
+  color: var(--black);
+  text-decoration: none;
+}
+
+a:hover {
+  color: var(--orange);
+}
+
+/* Remove all gradients, shadows, glows */
+.gradient,
+.shadow,
+.glow,
+.blur,
+.backdrop-blur {
+  display: none !important;
+}
+
+/* Buttons - Minimal */
+button {
+  font-family: var(--font-primary);
+  cursor: pointer;
+  border: none;
+  background: var(--black);
+  color: var(--white);
+  padding: 1rem 2rem;
+  font-weight: 700;
+  font-size: 0.875rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  transition: background 0.2s ease;
+}
+
+button:hover {
+  background: var(--orange);
+}
+
+button:disabled {
+  background: var(--grey-medium);
+  color: var(--grey-dark);
+  cursor: not-allowed;
+}
+
+/* Inputs - Minimal */
+input,
+textarea,
+select {
+  font-family: var(--font-primary);
+  padding: 0.75rem 1rem;
+  border: 1px solid var(--grey-medium);
+  background: var(--white);
+  color: var(--black);
+  font-size: 1rem;
+  width: 100%;
+}
+
+input:focus,
+textarea:focus,
+select:focus {
+  outline: none;
+  border-color: var(--black);
+}
+
+/* Clean scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--grey-light);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--grey-medium);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--grey-dark);
+}
+
+/* Selection */
+::selection {
+  background: var(--orange);
+  color: var(--white);
+}
+
+::-moz-selection {
+  background: var(--orange);
+  color: var(--white);
+}
+
+/* Remove all particles, backgrounds, patterns */
+.particles,
+.bg-particles,
+.bg-pattern,
+.animated-bg {
+  display: none !important;
+}

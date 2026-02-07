@@ -1,0 +1,144 @@
+/* DigitalTwin - Nothing Aesthetic - Clean & Minimal */
+
+.digital-twin-container {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    background: #000;
+    min-height: 500px;
+}
+
+.canvas-container {
+    width: 100%;
+    height: 100%;
+    background: #000;
+}
+
+canvas {
+    display: block;
+    width: 100% !important;
+    height: 100% !important;
+}
+
+.loading-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: #000;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    z-index: 10;
+}
+
+.spinner {
+    width: 40px;
+    height: 40px;
+    border: 2px solid #333;
+    border-top-color: #FFF;
+    animation: spin 1s linear infinite;
+    margin-bottom: 1rem;
+}
+
+@keyframes spin {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.loading-overlay p {
+    color: #FFF;
+    font-size: 0.75rem;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+}
+
+.twin-controls {
+    position: absolute;
+    bottom: 2rem;
+    right: 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.view-controls {
+    display: flex;
+    gap: 0.5rem;
+    background: #FFF;
+    border: 1px solid #E0E0E0;
+    padding: 0.5rem;
+}
+
+.view-btn {
+    width: 36px;
+    height: 36px;
+    background: transparent;
+    border: 1px solid #E0E0E0;
+    color: #666;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.view-btn:hover {
+    background: #000;
+    color: #FFF;
+    border-color: #000;
+}
+
+.legend {
+    background: #FFF;
+    border: 1px solid #E0E0E0;
+    padding: 1rem;
+    min-width: 150px;
+}
+
+.legend h4 {
+    font-size: 0.6875rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    color: #000;
+    margin: 0 0 0.75rem 0;
+}
+
+.legend-item {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    margin-bottom: 0.5rem;
+    font-size: 0.75rem;
+    color: #666;
+}
+
+.legend-item:last-child {
+    margin-bottom: 0;
+}
+
+.legend-color {
+    width: 20px;
+    height: 12px;
+    border: 1px solid #E0E0E0;
+}
+
+@media (max-width: 768px) {
+    .twin-controls {
+        bottom: 1rem;
+        right: 1rem;
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+
+    .legend {
+        display: none;
+    }
+}

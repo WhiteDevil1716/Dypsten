@@ -1,0 +1,155 @@
+/* AlertFeed - Nothing Aesthetic */
+
+.alert-feed {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.alerts-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1px;
+    background: #E0E0E0;
+    border: 1px solid #E0E0E0;
+}
+
+.alert-item {
+    background: var(--white, #FFF);
+    padding: 1.5rem;
+    transition: background 0.2s ease;
+    cursor: pointer;
+}
+
+.alert-item:hover {
+    background: #F5F5F5;
+}
+
+.alert-item.acknowledged {
+    opacity: 0.5;
+}
+
+.alert-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 0.75rem;
+}
+
+.priority-badge {
+    font-size: 0.6875rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    padding: 0.25rem 0.75rem;
+    background: #000;
+    color: #FFF;
+}
+
+.priority-badge.CRITICAL {
+    background: #FF5722;
+    color: #000;
+}
+
+.priority-badge.HIGH {
+    background: #000;
+    color: #FFF;
+}
+
+.priority-badge.MEDIUM {
+    background: #666;
+    color: #FFF;
+}
+
+.priority-badge.LOW {
+    background: #E0E0E0;
+    color: #000;
+}
+
+.alert-time {
+    font-size: 0.75rem;
+    color: #666;
+    font-weight: 500;
+}
+
+.alert-body h4 {
+    font-size: 0.875rem;
+    font-weight: 700;
+    color: #000;
+    margin-bottom: 0.5rem;
+    letter-spacing: -0.25px;
+}
+
+.alert-body p {
+    font-size: 0.875rem;
+    color: #666;
+    line-height: 1.5;
+    margin-bottom: 0.75rem;
+}
+
+.alert-details {
+    display: flex;
+    gap: 2rem;
+    margin-bottom: 0.75rem;
+    font-size: 0.75rem;
+    color: #666;
+}
+
+.alert-detail strong {
+    color: #000;
+    font-weight: 700;
+}
+
+.alert-actions {
+    display: flex;
+    gap: 0.5rem;
+}
+
+.ack-btn {
+    padding: 0.5rem 1rem;
+    background: #000;
+    color: #FFF;
+    border: none;
+    font-size: 0.75rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    cursor: pointer;
+    transition: background 0.2s ease;
+}
+
+.ack-btn:hover:not(:disabled) {
+    background: #FF5722;
+}
+
+.ack-btn:disabled {
+    background: #E0E0E0;
+    color: #666;
+    cursor: not-allowed;
+}
+
+.empty-state {
+    text-align: center;
+    padding: 4rem 2rem;
+    color: #666;
+}
+
+.empty-state-icon {
+    font-size: 3rem;
+    opacity: 0.2;
+    margin-bottom: 1rem;
+}
+
+.empty-state p {
+    font-size: 0.875rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: 500;
+}
+
+/* Remove all animations and hover effects */
+.slide-in,
+.fade-in,
+.border-pulse {
+    animation: none !important;
+}

@@ -1,0 +1,348 @@
+/* AlertControl - Nothing Aesthetic - Optimized */
+
+.alert-control {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 1px;
+    background: #E0E0E0;
+    overflow-y: auto;
+}
+
+/* Sections */
+.control-section {
+    background: #FFF;
+    padding: 1.5rem;
+    flex-shrink: 0;
+}
+
+.section-title {
+    font-size: 0.6875rem;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: #000;
+    margin: 0 0 1.25rem 0;
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+}
+
+.badge {
+    background: #FF5722;
+    color: #FFF;
+    font-size: 0.625rem;
+    font-weight: 900;
+    padding: 0.25rem 0.5rem;
+    letter-spacing: 1px;
+}
+
+/* Form Elements */
+.form-group {
+    margin-bottom: 1.25rem;
+}
+
+.form-group:last-child {
+    margin-bottom: 0;
+}
+
+.form-group label {
+    display: block;
+    font-size: 0.625rem;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    color: #666;
+    margin-bottom: 0.625rem;
+}
+
+.priority-buttons {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0.5rem;
+}
+
+.priority-btn {
+    padding: 0.625rem;
+    border: 1px solid #E0E0E0;
+    background: #FFF;
+    color: #666;
+    font-size: 0.625rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.priority-btn:hover {
+    border-color: #000;
+    color: #000;
+}
+
+.priority-btn.active {
+    background: #000;
+    color: #FFF;
+    border-color: #000;
+}
+
+.priority-btn.active.priority-low {
+    background: #22c55e;
+    border-color: #22c55e;
+    color: #000;
+}
+
+.priority-btn.active.priority-medium {
+    background: #f59e0b;
+    border-color: #f59e0b;
+    color: #000;
+}
+
+.priority-btn.active.priority-high {
+    background: #ef4444;
+    border-color: #ef4444;
+    color: #FFF;
+}
+
+.priority-btn.active.priority-critical {
+    background: #dc2626;
+    border-color: #dc2626;
+    color: #FFF;
+}
+
+textarea {
+    width: 100%;
+    padding: 0.625rem;
+    border: 1px solid #E0E0E0;
+    background: #FFF;
+    color: #000;
+    font-family: inherit;
+    font-size: 0.8125rem;
+    resize: none;
+    transition: border-color 0.2s ease;
+}
+
+textarea:focus {
+    outline: none;
+    border-color: #000;
+}
+
+textarea::placeholder {
+    color: #999;
+}
+
+.submit-btn {
+    width: 100%;
+    padding: 0.875rem;
+    background: #000;
+    color: #FFF;
+    border: none;
+    font-size: 0.6875rem;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: background 0.2s ease;
+}
+
+.submit-btn:hover:not(:disabled) {
+    background: #FF5722;
+}
+
+.submit-btn:disabled {
+    background: #E0E0E0;
+    color: #999;
+    cursor: not-allowed;
+}
+
+/* Empty State */
+.empty-state {
+    text-align: center;
+    padding: 2.5rem 1rem;
+}
+
+.empty-icon {
+    width: 42px;
+    height: 42px;
+    margin: 0 auto 0.875rem;
+    background: #F5F5F5;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.8125rem;
+    font-weight: 900;
+    color: #666;
+    letter-spacing: 1px;
+}
+
+.empty-state p {
+    font-size: 0.6875rem;
+    color: #999;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: 500;
+}
+
+/* Pending Alerts */
+.pending-alerts {
+    display: flex;
+    flex-direction: column;
+    gap: 0.875rem;
+}
+
+.pending-alert {
+    border: 2px solid #E0E0E0;
+    padding: 1.25rem;
+    background: #FFF;
+    transition: border-color 0.2s ease;
+}
+
+.pending-alert:hover {
+    border-color: #000;
+}
+
+.pending-alert.priority-critical {
+    border-color: #dc2626;
+}
+
+.pending-alert.priority-high {
+    border-color: #ef4444;
+}
+
+.alert-header-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 0.875rem;
+}
+
+.alert-priority {
+    font-size: 0.625rem;
+    font-weight: 900;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    padding: 0.3125rem 0.625rem;
+    background: #000;
+    color: #FFF;
+}
+
+.pending-alert.priority-low .alert-priority {
+    background: #22c55e;
+    color: #000;
+}
+
+.pending-alert.priority-medium .alert-priority {
+    background: #f59e0b;
+    color: #000;
+}
+
+.pending-alert.priority-high .alert-priority {
+    background: #ef4444;
+    color: #FFF;
+}
+
+.pending-alert.priority-critical .alert-priority {
+    background: #dc2626;
+    color: #FFF;
+}
+
+.alert-confidence {
+    font-size: 0.625rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+    color: #666;
+    background: #F5F5F5;
+    padding: 0.3125rem 0.625rem;
+}
+
+.alert-message {
+    font-size: 0.8125rem;
+    color: #000;
+    line-height: 1.5;
+    margin-bottom: 0.875rem;
+    font-weight: 500;
+}
+
+.alert-timer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.625rem;
+    background: #F5F5F5;
+    margin-bottom: 0.875rem;
+}
+
+.timer-label {
+    font-size: 0.625rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color: #666;
+}
+
+.timer-value {
+    font-size: 1rem;
+    font-weight: 900;
+    letter-spacing: -0.5px;
+    color: #FF5722;
+    font-variant-numeric: tabular-nums;
+}
+
+.alert-actions {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0.5rem;
+}
+
+.approve-btn,
+.reject-btn {
+    padding: 0.625rem;
+    border: 1px solid;
+    font-size: 0.625rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.approve-btn {
+    background: #000;
+    color: #FFF;
+    border-color: #000;
+}
+
+.approve-btn:hover {
+    background: #22c55e;
+    border-color: #22c55e;
+    color: #000;
+}
+
+.reject-btn {
+    background: #FFF;
+    color: #000;
+    border-color: #E0E0E0;
+}
+
+.reject-btn:hover {
+    background: #000;
+    color: #FFF;
+    border-color: #000;
+}
+
+/* Scrollbar */
+.alert-control::-webkit-scrollbar {
+    width: 4px;
+}
+
+.alert-control::-webkit-scrollbar-track {
+    background: #F5F5F5;
+}
+
+.alert-control::-webkit-scrollbar-thumb {
+    background: #E0E0E0;
+}
+
+.alert-control::-webkit-scrollbar-thumb:hover {
+    background: #666;
+}
